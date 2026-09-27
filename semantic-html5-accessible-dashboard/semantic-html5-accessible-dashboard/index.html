@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible enterprise dashboard built with semantic HTML5.">
+  <title>Enterprise Dashboard — Overview</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" aria-label="Enterprise Dashboard home">Enterprise Dashboard</a>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Overview</a></li>
+        <li><a href="pages/reports.html">Reports</a></li>
+        <li><a href="pages/settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Dashboard sidebar">
+      <h2>Workspace</h2>
+      <nav aria-label="Dashboard navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Overview</a></li>
+          <li><a href="pages/reports.html">Reports</a></li>
+          <li><a href="pages/settings.html">Settings</a></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="quick-actions-heading">
+        <h2 id="quick-actions-heading">Quick actions</h2>
+        <button type="button" data-open-modal>New report</button>
+      </section>
+    </aside>
+
+    <main id="main-content" tabindex="-1">
+      <header class="page-header">
+        <p class="eyebrow">Operations</p>
+        <h1>Dashboard overview</h1>
+        <p>Monitor current business activity and recent operational changes.</p>
+      </header>
+
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Active users</h3>
+            <p class="metric">12,480</p>
+            <p>Across all workspaces</p>
+          </article>
+          <article class="card">
+            <h3>Open reports</h3>
+            <p class="metric">48</p>
+            <p>8 require attention</p>
+          </article>
+          <article class="card">
+            <h3>System uptime</h3>
+            <p class="metric">99.98%</p>
+            <p>Current reporting period</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="activity-heading">
+        <h2 id="activity-heading">Recent activity</h2>
+        <div class="table-wrapper">
+          <table>
+            <caption>Recent dashboard activity</caption>
+            <thead>
+              <tr>
+                <th scope="col">Activity</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Status</th>
+                <th scope="col">Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Quarterly report</th>
+                <td>Operations</td>
+                <td><span class="status success">Complete</span></td>
+                <td><time datetime="2026-09-27T10:30">27 Sep, 10:30</time></td>
+              </tr>
+              <tr>
+                <th scope="row">Access review</th>
+                <td>Security</td>
+                <td><span class="status warning">Review</span></td>
+                <td><time datetime="2026-09-27T09:15">27 Sep, 09:15</time></td>
+              </tr>
+              <tr>
+                <th scope="row">Usage export</th>
+                <td>Analytics</td>
+                <td><span class="status success">Complete</span></td>
+                <td><time datetime="2026-09-26T16:45">26 Sep, 16:45</time></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="announcement-heading">
+        <h2 id="announcement-heading">Announcement</h2>
+        <article class="notice">
+          <h3>Scheduled maintenance</h3>
+          <p>Reporting services are scheduled for maintenance on 30 September.</p>
+          <a href="pages/reports.html">View reporting details</a>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Enterprise Dashboard</p>
+    <nav aria-label="Footer navigation">
+      <ul class="nav-list">
+        <li><a href="pages/settings.html">Accessibility settings</a></li>
+        <li><a href="pages/reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <dialog id="report-modal" aria-labelledby="modal-title">
+    <form method="dialog" class="modal-card" id="report-form">
+      <header>
+        <h2 id="modal-title">Create a report</h2>
+        <button type="button" class="icon-button" data-close-modal aria-label="Close create report dialog">×</button>
+      </header>
+
+      <fieldset>
+        <legend>Report details</legend>
+
+        <div class="form-field">
+          <label for="report-name">Report name <span aria-hidden="true">*</span></label>
+          <input id="report-name" name="report-name" type="text" required maxlength="100" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label for="report-type">Report type</label>
+          <select id="report-type" name="report-type" required>
+            <option value="">Choose a type</option>
+            <option value="operations">Operations</option>
+            <option value="finance">Finance</option>
+            <option value="analytics">Analytics</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Create report</button>
+        <button type="button" class="secondary" data-close-modal>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enterprise dashboard reports.">
+  <title>Enterprise Dashboard — Reports</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="brand"><a href="../index.html">Enterprise Dashboard</a></div>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="../index.html">Overview</a></li>
+        <li><a href="reports.html" aria-current="page">Reports</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Dashboard sidebar">
+      <h2>Workspace</h2>
+      <nav aria-label="Dashboard navigation">
+        <ul>
+          <li><a href="../index.html">Overview</a></li>
+          <li><a href="reports.html" aria-current="page">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" tabindex="-1">
+      <header class="page-header">
+        <p class="eyebrow">Analytics</p>
+        <h1>Reports</h1>
+        <p>Review generated reports and their current status.</p>
+      </header>
+
+      <section aria-labelledby="reports-table-heading">
+        <h2 id="reports-table-heading">Report library</h2>
+        <div class="table-wrapper">
+          <table>
+            <caption>Available enterprise reports</caption>
+            <thead>
+              <tr>
+                <th scope="col">Report</th>
+                <th scope="col">Department</th>
+                <th scope="col">Status</th>
+                <th scope="col">Last updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Monthly operations</th>
+                <td>Operations</td>
+                <td><span class="status success">Published</span></td>
+                <td><time datetime="2026-09-27">27 Sep 2026</time></td>
+              </tr>
+              <tr>
+                <th scope="row">Security access review</th>
+                <td>Security</td>
+                <td><span class="status warning">Pending</span></td>
+                <td><time datetime="2026-09-26">26 Sep 2026</time></td>
+              </tr>
+              <tr>
+                <th scope="row">Usage analytics</th>
+                <td>Analytics</td>
+                <td><span class="status success">Published</span></td>
+                <td><time datetime="2026-09-25">25 Sep 2026</time></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filter reports</h2>
+        <form class="filter-form" action="#" method="get">
+          <fieldset>
+            <legend>Report filters</legend>
+            <div class="form-field">
+              <label for="search">Search reports</label>
+              <input id="search" name="search" type="search" placeholder="Report name">
+            </div>
+            <div class="form-field">
+              <label for="department">Department</label>
+              <select id="department" name="department">
+                <option value="">All departments</option>
+                <option value="operations">Operations</option>
+                <option value="security">Security</option>
+                <option value="analytics">Analytics</option>
+              </select>
+            </div>
+          </fieldset>
+          <button type="submit">Apply filters</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Enterprise Dashboard</p>
+  </footer>
+</body>
+</html>
